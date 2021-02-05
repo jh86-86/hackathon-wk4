@@ -67,5 +67,8 @@
     display: grid;
     justify-content: center;
     background-color:lightslategrey;
+    font-size: 36px;
+    font-weight: bolder;
+    color:midnightblue;
     background-image: url("https://i.pinimg.com/736x/d9/39/6c/d9396cb4ea4df6ace761f6da1a3dce46.jpg");
 }
