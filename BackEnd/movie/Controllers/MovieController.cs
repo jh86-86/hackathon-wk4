@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 
 [ApiController]
-[Route("Movies")]
+[Route("[controller]s")]
 public class MovieController : ControllerBase
 {
     private readonly IRepository<Movie> _movieRepository;
@@ -18,18 +18,13 @@ public class MovieController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        //return _movieRepository.GetAll();
         try
         {
             var allMovies = await _movieRepository.GetAll();
             return Ok(allMovies);
         }
-        catch (Exception error)
+        catch (Exception)
         {
-            Console.WriteLine(error.Message);
-            Console.WriteLine(error.StackTrace);
-            
-            //handle exception
             return NoContent();
         }
     }
@@ -45,7 +40,6 @@ public class MovieController : ControllerBase
         }
         catch (Exception)
         {
-            //handle exception
             return NotFound($"no movie with id {id}");
         }  
     }
@@ -60,7 +54,6 @@ public class MovieController : ControllerBase
         }
         catch (Exception)
         {
-            //handle exception
             return NotFound();
         }
     }
@@ -70,14 +63,11 @@ public class MovieController : ControllerBase
     {
         try
         {
-            var editMovie = await _movieRepository.Update(new Movie { Id = id, Title = movie.Title, Description= movie.Description, Time1= movie.Time1, Time2= movie.Time2 });
+            var editMovie = await _movieRepository.Update(new Movie { Id = id, Title = movie.Title, Description = movie.Description, Time1 = movie.Time1, Time2 = movie.Time2 });
             return Ok(editMovie);
         }
-        catch (Exception error)
+        catch (Exception)
         {
-            Console.WriteLine(error.Message);
-            Console.WriteLine(error.StackTrace);
-            //handle exception
             return NotFound("no movie updated");
         }  
     }
@@ -87,14 +77,11 @@ public class MovieController : ControllerBase
     {
         try
         {
-            var insertMovie = await  _movieRepository.Insert(movie);
+            var insertMovie = await _movieRepository.Insert(movie);
             return Ok(insertMovie);
         }
-        catch (Exception error)
+        catch (Exception)
         {   
-            Console.WriteLine(error.Message);
-            Console.WriteLine(error.StackTrace);
-            //handle exception
             return NotFound("no movie found");
         }  
     }

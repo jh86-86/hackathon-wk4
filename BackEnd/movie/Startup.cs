@@ -27,6 +27,7 @@ namespace cinema
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddTransient<IRepository<Movie>, MovieRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
