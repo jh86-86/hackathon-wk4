@@ -16,9 +16,7 @@ namespace cinema
 {
     public class Startup
     {
-
-        
-
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,18 +27,20 @@ namespace cinema
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-          services.AddControllers();
-        services.AddCors(options =>
+          services.AddCors(options =>
         {
-            options.AddDefaultPolicy(
-                builder =>
-                {
-                    builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
-                });
+            options.AddPolicy(name: MyAllowSpecificOrigins,
+                              builder =>
+                              {
+                                  builder.WithOrigins("http://localhost:5000",
+                                                      "https://localhost:5001")
+                                                      .AllowAnyHeader()
+                                                      .AllowAnyMethod();
+                              });
         });
 
         // services.AddResponseCaching();
-        services.AddControllers();  //endpoint origin add
+            services.AddControllers();  //endpoint origin add
 
             services.AddTransient<IRepository<Movie>, MovieRepository>();
             services.AddControllers();
@@ -60,7 +60,7 @@ namespace cinema
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "movie v1"));
                 
             }
-            app.UseCors(); //added orgin
+            app.UseCors(MyAllowSpecificOrigins); //added orgin
 
             app.UseHttpsRedirection();
 
