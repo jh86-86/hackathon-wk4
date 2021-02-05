@@ -1,0 +1,66 @@
+#container{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+
+#head-box{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    justify-content: center;
+    background-color: bisque;
+}
+
+/* #movie-info{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: grid;
+    justify-content: center;
+} */
+
+#choices{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+#times{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: grid;
+    justify-content: center;
+    background-color: darkolivegreen;
+}
+#description{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    justify-content: center;
+    background-color:hotpink;
+}
+
+#go-to-room{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: grid;
+    justify-content: center;
+    background-color:lightslategrey;
+}
