@@ -15,6 +15,10 @@
     display: grid;
     justify-content: center;
     background-color: bisque;
+    background-image: url("https://t4.ftcdn.net/jpg/03/35/34/15/360_F_335341530_fn9CKJT39F1sqX5uynUPv0SEv7mzR5gw.jpg");
+    font-size: xx-large;
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* #movie-info{
@@ -63,4 +67,5 @@
     display: grid;
     justify-content: center;
     background-color:lightslategrey;
+    background-image: url("https://i.pinimg.com/736x/d9/39/6c/d9396cb4ea4df6ace761f6da1a3dce46.jpg");
 }

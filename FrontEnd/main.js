@@ -9,12 +9,11 @@
 //   data.forEach(renderToDo);
 // }
 
-
+const url="http://localhost:5000";
 
 async function LoadMovieChoice(){
-    const url="http://localhost:5000";
-    const result=await fetch(`${url}/Movies`);
-    const data= await result.json();
+    const result = await fetch(`${url}/movies`);
+    const data = await result.json();
     console.log(data);
 }
 
