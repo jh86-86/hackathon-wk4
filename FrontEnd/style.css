@@ -1,6 +1,6 @@
 #container{
-    width:100vw;
-    height:100vh;
+    width:99vw;
+    height:95vh;
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -14,21 +14,19 @@
     grid-row-end: 2;
     display: grid;
     justify-content: center;
-    background-color: bisque;
-    background-image: url("https://t4.ftcdn.net/jpg/03/35/34/15/360_F_335341530_fn9CKJT39F1sqX5uynUPv0SEv7mzR5gw.jpg");
-    font-size: xx-large;
-    color: red;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("https://i.dlpng.com/static/png/5852343-filmstrip-png-download-png-image-with-transparent-film-reel-film-reel-transparent-820_356_preview.png");
+    align-content: center;
+    background-size: 34%;
 }
 
-/* #movie-info{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    display: grid;
-    justify-content: center;
-} */
+#main-header{
+    font-size: 80px;  
+    color: rgb(255, 81, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    align-content: center;
+    
+}
 
 #choices{
     grid-column-start: 1;
@@ -37,7 +35,7 @@
     grid-row-end: 3;
     display: grid;
     justify-content: center;
-    background-color: cornflowerblue;
+    background-color: rgb(173, 144, 187);
 }
 
 #times{
@@ -47,16 +45,16 @@
     grid-row-end: 5;
     display: grid;
     justify-content: center;
-    background-color: darkolivegreen;
+    background-color: rgba(100, 175, 189, 0.767);
 }
-#description{
+.description{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
     display: grid;
     justify-content: center;
-    background-color:hotpink;
+    background-color:rgba(240, 203, 81, 0.87);
 }
 
 #go-to-room{
@@ -71,4 +69,65 @@
     font-weight: bolder;
     color:midnightblue;
     background-image: url("https://i.pinimg.com/736x/d9/39/6c/d9396cb4ea4df6ace761f6da1a3dce46.jpg");
+    background-size: 87%;
 }
+
+label{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    color: rgba(240, 203, 81, 0.87);
+    margin: 30px 20px;
+}
+
+#mySelect{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    color: rgba(100, 175, 189, 0.767);
+    align-content: center;
+}
+
+h3{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    color: rgb(173, 144, 187);
+    margin: 30px 20px;
+}
+
+p{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    color: rgb(173, 144, 187);
+    margin: 30px 20px;
+}
+
+button.one {
+    background-color:rgb(173, 144, 187);
+    border-radius: 20px;
+    margin-left: 20px;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+  }
+
+  button.two {
+    background-color:rgba(240, 203, 81, 0.87);
+    border-radius: 20px;
+    margin-left: 20px;
+    border: none;
+    color: white;
+    padding: 8px 18px;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+  }
