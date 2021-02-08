@@ -1,5 +1,39 @@
 const url="http://localhost:5000";
 
+let mySelect = document.querySelector("#mySelect");
+let boxDescription = document.querySelector("#descPTag");
+
+mySelect.addEventListener("change", movieId);
+
+function movieId(e) {
+    const optionId = mySelect[mySelect.selectedIndex].id;
+    LoadMovieChoice(optionId);
+}
+
+function fillDescription(description){
+    console.log(description)
+    boxDescription.innerHTML = description;
+}
+
+async function LoadMovieChoice(movieNumber){
+    fetch(`${url}/movies/${movieNumber}`)
+    .then(result => result.json())
+    .then(data => {
+        fillDescription(data.description);
+    })
+
+}
+
+LoadMovieChoice();
+movieId();
+
+console.log("done");
+
+
+
+
+/* const url="http://localhost:5000";
+
 let matOpt = document.querySelector("#Matrix-optn");
 let hangOpt = document.querySelector("#TheHangover-optn");
 let titanicOpt = document.querySelector("#Titanic-optn");
@@ -47,4 +81,4 @@ LoadMovieChoiceOne();
 
 LoadMovieChoiceTwo();
 
-LoadMovieChoiceThree();
+LoadMovieChoiceThree(); */
